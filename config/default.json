@@ -1,0 +1,5 @@
+{
+    "MONGO_URI": "mongodb+srv://ayushadmin:adminpass@quizappcluster-xwaas.mongodb.net/quizdb?retryWrites=true&w=majority",
+    "JWT_SECRET": "itsJwt868$secret",
+    "PORT": "8000"
+}
