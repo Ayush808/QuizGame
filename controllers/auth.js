@@ -1,4 +1,4 @@
-const User = require('../models/user')
+const User = require('../models/User')
 const jwt = require('jsonwebtoken')//used to generate the signed token 
 const expressJwt = require('express-jwt')// used for authorization check
 const config = require('config')
