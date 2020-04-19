@@ -1,4 +1,4 @@
-const API = 'http://localhost:8000/api'
+const API = '/api'
 require('dotenv').config()
 
 export const getAllQuestions = (userId, token) => {
