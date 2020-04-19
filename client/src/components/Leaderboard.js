@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react"
 import Navbar from "../components/Navbar"
 import { top10Quizer } from './userApi'
+import { isAuthenticated } from '../auth/index'
 
 const Leaderboard = ({ candi, finalScore }) => {
+
+    const { user: { name, score } } = isAuthenticated();
 
     const [users, setUsers] = useState([])
 
@@ -20,16 +23,15 @@ const Leaderboard = ({ candi, finalScore }) => {
 
     useEffect(() => {
         const interval = setTimeout(() => {
-            console.log('This will run every second!');
+            //console.log('This will run every second!');
             init()
         }, 1000);
-        return () => clearInterval(interval);
     }, [])
 
     return (
         <div className="bg-light">
             <Navbar />
-            <p>I hope {candi} you did best. :) your score {finalScore}</p>
+            <p className="text-center">I hope {name} you did best. :) your score {score}</p>
             <div className="leaderboard">
                 <h1>
                     Top players :) Cheers

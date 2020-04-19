@@ -34,6 +34,12 @@ const Navbar = ({ history }) => {
 
                         {isAuthenticated() && (
                             <Fragment>
+                                <Link to='/leaderboard' className="btn btn-warning mr-4">Leaderboard</Link>
+                            </Fragment>
+                        )}
+
+                        {isAuthenticated() && (
+                            <Fragment>
                                 <li className="nav-item">
                                     <span
                                         className="btn btn-danger"

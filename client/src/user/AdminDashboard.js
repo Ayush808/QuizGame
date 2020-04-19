@@ -44,11 +44,14 @@ const AdminDashboard = () => {
         <div className="container-fluid bg-dark mb-4">
             <Navbar />
             <div className="row bgimg">
-                <div className="col-3">
+                <div className="col-sm-3">
                     {adminLinks()}
                 </div>
-                <div className="col-9">
+                <div className="col-sm-9">
                     {adminInfo()}
+                </div>
+                <div className="col-sm-12">
+                    <h2 style={{ textAlign: "center", color: "orange" }}><b>Quiz-Application</b></h2>
                 </div>
             </div>
         </div>

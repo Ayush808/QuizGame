@@ -49,39 +49,29 @@ const CreateQuestion = () => {
     }
 
     const newPostForm = () => (
-        <form className="mb-3">
-            <div className="form-group">
-                <label className="text-dark">Question</label>
-                <input type="text" onChange={handleChange('question')} className="form-control" value={question} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">option1</label>
-                <input type="text" onChange={handleChange('option1')} className="form-control" value={option1} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">option2</label>
-                <input type="text" onChange={handleChange('option2')} className="form-control" value={option2} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">option3</label>
-                <input type="text" onChange={handleChange('option3')} className="form-control" value={option3} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">option4</label>
-                <input type="text" onChange={handleChange('option4')} className="form-control" value={option4} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">Correct Answer</label>
-                <select onChange={handleChange('answer')} className="form-control">
-                    <option>Please Select</option>
-                    <option value={answer}>1</option>
-                    <option value={answer}>2</option>
-                    <option value={answer}>3</option>
-                    <option value={answer}>4</option>
-                </select>
-            </div>
-            <button className="btn btn-outline-primary" onClick={clickSubmit} style={{ float: "right" }}>Create Question</button>
-        </form>
+
+        <div className="form-style-5">
+            <form>
+                <fieldset>
+                    <legend><span class="number">1</span>Question</legend>
+                    <input type="text" onChange={handleChange('question')} value={question} placeholder="Question *" required />
+                    <legend><span class="number">2</span>Options</legend>
+                    <input type="text" onChange={handleChange('option1')} value={option1} placeholder="option 1 *" required />
+                    <input type="text" onChange={handleChange('option2')} value={option2} placeholder="option 2 *" required />
+                    <input type="text" onChange={handleChange('option3')} value={option3} placeholder="option 3 *" required />
+                    <input type="text" onChange={handleChange('option4')} value={option4} placeholder="option 4 *" required />
+                    <legend><span class="number">3</span>Correct Answer</legend>
+                    <select id="job" onChange={handleChange('answer')} >
+                        <option >Please Select</option>
+                        <option value={1} >1</option>
+                        <option value={2} >2</option>
+                        <option value={3} >3</option>
+                        <option value={4} >4</option>
+                    </select>
+                </fieldset>
+                <button value="Apply" onClick={clickSubmit} >Create Question</button>
+            </form>
+        </div>
     )
 
     const showError = () => {
