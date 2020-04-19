@@ -42,7 +42,7 @@ const Dashboard = () => {
     return (
         <div className="container-fluid bg-dark">
             <Navbar />
-            <div className="row">
+            <div className="row bgimg">
                 <div className="col-3">
                     {userLinks()}
                     <Link to='/testlink' className="btn btn-primary btn-block">Take Test</Link>

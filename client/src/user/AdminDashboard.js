@@ -43,7 +43,7 @@ const AdminDashboard = () => {
     return (
         <div className="container-fluid bg-dark mb-4">
             <Navbar />
-            <div className="row">
+            <div className="row bgimg">
                 <div className="col-3">
                     {adminLinks()}
                 </div>

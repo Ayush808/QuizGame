@@ -34,16 +34,17 @@ const Leaderboard = ({ candi, finalScore }) => {
                 <h1>
                     Top players :) Cheers
                 </h1>
-                {
-                    users && users.map((user, index) => (
-                        <ol>
+                <ol>
+                    {
+                        users && users.map((user, index) => (
+
                             <li>
                                 <mark>{user.name}</mark>
                                 <small>{user.score}</small>
                             </li>
-                        </ol>
-                    ))
-                }
+                        ))
+                    }
+                </ol>
             </div>
         </div>
     )

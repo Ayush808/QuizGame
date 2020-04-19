@@ -4,8 +4,10 @@ import Navbar from './Navbar'
 const Home = () => {
 
     return (
-        <div className="bgimg">
+        <div>
             <Navbar />
+            <div className="bgimg">
+            </div>
         </div>
     )
 }
