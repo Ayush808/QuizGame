@@ -118,9 +118,9 @@ const Quiz = () => {
                     </div>
                     {
                         currentQuestion === (questions.length - 1) ? (
-                            <button onClick={handlefinish} className="btn btn-success btn-block">Finish</button>
+                            <button onClick={handlefinish} className="button5" >Finish</button>
                         ) : (
-                                <button onClick={handleNext} className="btn btn-primary btn-block">Next</button>
+                                <button onClick={handleNext} className="button5">Next</button>
                             )
                     }
                 </div>

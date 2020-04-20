@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar"
 import { top10Quizer } from './userApi'
 import { isAuthenticated } from '../auth/index'
 
-const Leaderboard = ({ candi, finalScore }) => {
+const Leaderboard = ({ candi, finalScore = null }) => {
 
-    const { user: { name, score } } = isAuthenticated();
+    const { user: { name } } = isAuthenticated();
 
     const [users, setUsers] = useState([])
 
@@ -31,7 +31,7 @@ const Leaderboard = ({ candi, finalScore }) => {
     return (
         <div className="bg-light">
             <Navbar />
-            <p className="text-center">I hope {name} you did best. :) your score {score}</p>
+            {finalScore !== null ? <p className="text-center">I hope {name} you did best. :) your score {finalScore}</p> : null}
             <div className="leaderboard">
                 <h1>
                     Top players :) Cheers
